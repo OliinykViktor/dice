@@ -69,7 +69,17 @@ pnpm dev
 - `pnpm build` — production build
 - `pnpm start` — запуск production сервера
 - `pnpm lint` — перевірка ESLint
+- `pnpm test` — запуск тестів (Vitest, run mode)
+- `pnpm test:watch` — запуск тестів у watch mode
 - `pnpm lint:commit` — перевірка останнього commit message
+
+## Tests
+
+- Стек: `Vitest` + `Testing Library` + `jsdom`.
+- Поточне мінімальне покриття включає 3 ключові тести:
+  - `src/entities/game/model/game-logic.test.ts` — unit для `checkWin()` (включно з edge case `equal`);
+  - `src/features/play-dice/model/use-dice-game.test.tsx` — integration для ліміту history (`max 10`);
+  - `src/widgets/dice-game/ui/dice-game-widget.test.tsx` — integration UI-флоу (`PLAY` -> toast + history update).
 
 ## Code Style / Commit Rules
 
