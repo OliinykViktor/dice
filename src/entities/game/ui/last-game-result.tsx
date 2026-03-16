@@ -60,7 +60,7 @@ export function LastGameResult({ entry, onClose }: LastGameResultProps) {
           p: `${uiSpacing.xxs} ${uiSpacing.sm}`,
           boxShadow: uiShadow.none,
           bgcolor: entry.isWin ? uiColors.toastSuccess : uiColors.toastError,
-          "& .MuiAlert-icon": { opacity: 1, mr: 1, color: uiColors.white, mt: 0, pt: uiSpacing.xs },
+          "& .MuiAlert-icon": { opacity: 1, mr: 1, color: uiColors.white, mt: 0, pt: uiSize.toastIconTopPadding },
         }}
       >
         <Stack spacing={0.3}>

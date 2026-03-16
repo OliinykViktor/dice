@@ -9,7 +9,7 @@ export function HomePage() {
       sx={{
         minHeight: "100vh",
         background: uiColors.pageBackground,
-        py: { xs: 2, sm: 14 },
+        pt: "113px",
       }}
     >
       <Container

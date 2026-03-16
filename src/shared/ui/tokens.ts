@@ -35,6 +35,7 @@ export const uiSize = {
   sliderLabelPointer: "10px",
   toastWidthSm: "460px",
   toastMaxWidth: "560px",
+  toastIconTopPadding: "10px",
 } as const;
 
 export const uiRadius = {
