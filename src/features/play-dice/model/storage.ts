@@ -1,5 +1,3 @@
-"use client";
-
 import type { Condition, GameEntry } from "@/src/entities/game/model/types";
 import { HISTORY_LIMIT } from "@/src/shared/config/game";
 
