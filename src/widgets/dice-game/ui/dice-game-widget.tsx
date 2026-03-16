@@ -25,20 +25,21 @@ export function DiceGameWidget() {
   } = useDiceGame();
 
   return (
-    <Stack spacing={uiSpacing.sm}>
+    <>
       <LastGameResult key={toastEntry?.id ?? "no-toast"} entry={toastEntry} onClose={clearToast} />
-
-      <PlayDiceForm
-        thresholdInput={thresholdInput}
-        condition={condition}
-        isThresholdValid={isThresholdValid}
-        currentResult={lastEntry?.result ?? 0}
-        resultAnimationTick={resultAnimationTick}
-        onThresholdInputChange={setThresholdInput}
-        onConditionChange={setCondition}
-        onPlay={handlePlay}
-      />
-      <GameHistoryList history={history} isLoading={isHydratingFromStorage} />
-    </Stack>
+      <Stack spacing={uiSpacing.sm}>
+        <PlayDiceForm
+          thresholdInput={thresholdInput}
+          condition={condition}
+          isThresholdValid={isThresholdValid}
+          currentResult={lastEntry?.result ?? 0}
+          resultAnimationTick={resultAnimationTick}
+          onThresholdInputChange={setThresholdInput}
+          onConditionChange={setCondition}
+          onPlay={handlePlay}
+        />
+        <GameHistoryList history={history} isLoading={isHydratingFromStorage} />
+      </Stack>
+    </>
   );
 }
